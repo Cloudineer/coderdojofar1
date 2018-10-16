@@ -1,2 +1,6 @@
-def adder(first, second):
-    return first+second
+class linelist:
+    def __init__(self):
+        self.list = []
+
+    def add(self, line):
+        self.list.append(line)
