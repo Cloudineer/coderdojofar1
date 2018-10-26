@@ -1,6 +1,7 @@
 import unittest
 
 from fileops import fileops
+# to learn about learn about using files in python see https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 
 class TestFileOps(unittest.TestCase):
     def test_save(self):
@@ -24,6 +25,7 @@ class TestFileOps(unittest.TestCase):
 #     def test_getlist(self):
 #       # make a method called getFileList that returns a list of all files,
 #       # the list should include the tests made above
+#       # to find how to get a file list look for os.listdir()
 #         filer = fileops()
 #         filelist = filer.getFileList()
 #         for fname in ['test1.txt','test2.txt']:

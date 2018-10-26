@@ -4,7 +4,7 @@ This is some example files for CoderDojo Faringdon to use as an exercise. They n
 
 ## Pass the tests
 
-Download these files into a new folder. To run the tests under Windows, open a command window, by hitting WINDOWS-R then cmd<RETURN>. Then cd into the directory with the python files and type:
+Download these files into a new folder. Remember you must download them as RAW files, click on the filename to see the file, then right-click on the RAW button and click on Save Target as... (or something similar to that - it varies from browser to browser). To run the tests under Windows, open a command window, by hitting WINDOWS-R then cmd<RETURN>. Then cd into the directory with the python files and type:
 
 $ py -m unittest 
 
