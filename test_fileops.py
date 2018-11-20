@@ -31,3 +31,8 @@ class TestFileOps(unittest.TestCase):
 #         for fname in ['test1.txt','test2.txt']:
 #             self.assertIn(fname, filelist)
 # 
+
+# these last two lines enable the tests to be run by running the module, e.g. from
+# within IDLE or pther IDE
+if __name__ == "__main__":
+    unittest.main()
