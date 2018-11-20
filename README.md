@@ -26,6 +26,9 @@ To write them just pass the tests in the related test_xxxx.py file. When the tes
 
 Remember that Google is your friend when it comes to coding. If you get stuck try a search to find an answer. A website called StackOverflow is often the best place for answers to coding questions.
 
-## For the WHIMPS who don't like python
+*Hint* to run the tests from within IDLE (or any IDE), add the following two lines to the end of your test script:
 
-Next week I want to see a firework display in Scratch, with 3 kinds of fireworks, including rockets that leave trails.
+```
+if __name__ == "__main__":
+    unittest.main()
+```
