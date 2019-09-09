@@ -3,6 +3,7 @@
 September 2019 - ready to turn into a computational sponge, soaking up as much knowledge and skills as possible. This term we will be constructing mazes and finding either our way out of them or other sprites inside them. You have the choice of language, but I suggest Python.    
 
 The first task is to write a program to draw a maze based on the following set of number:
+
 | Start X | Start Y | End X | End Y |
 |---------|---------|-------|-------|
 | 1 | 1 | 9 | 1 |
