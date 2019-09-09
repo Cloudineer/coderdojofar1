@@ -28,7 +28,7 @@ Which should make something that looks like:
 
 If you want to do this in Scratch you can, but you will need to make a list of lists. Each list will have 4 numbers, so it will look something like ListofLists.png (which can be found in this folder).
 
-![](//Cloudineer/coderdojofar1/blob/master/ListOfLists.png)
+![](https://github.com/Cloudineer/coderdojofar1/raw/master/ListOfLists.png)
 
 ## Pass the tests
 
