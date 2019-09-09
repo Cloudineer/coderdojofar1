@@ -30,6 +30,8 @@ If you want to do this in Scratch you can, but you will need to make a list of l
 
 ![](https://github.com/Cloudineer/coderdojofar1/raw/master/ListOfLists.png)
 
+This code can be found and copied from [Scratch Project](https://scratch.mit.edu/projects/327826513/)
+
 ## Pass the tests
 
 We will be using some unittests in the future, but when drawing stuff on screen it is impossible (well very difficult) to test automatically.
