@@ -26,6 +26,11 @@ Which should make something that looks like:
       *********.
 ```
 
+Or in Scratch this might look like:
+
+![](https://github.com/Cloudineer/coderdojofar1/raw/master/MazeDrawnInScratch.png)
+
+
 If you want to do this in Scratch you can, but you will need to make a list of lists. Each list will have 4 numbers, so it will look something like ListofLists.png (which can be found in this folder).
 
 ![](https://github.com/Cloudineer/coderdojofar1/raw/master/ListOfLists.png)
