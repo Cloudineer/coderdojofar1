@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+        <head>
+                <title>Maze Maker</title>
+        </head>
+        <body>
+                <h1>Maze Maker</h1>
+                <canvas id="maze" width="400px" height="400px" style="border: 10px solid black"></canvas>
+                <script>
+                var canvas = document.getElementById("maze");
+                var handle = canvas.getContext("2d");
+                function drawMazeLine(x1,y1,x2,y2) {
+                    handle.fillRect(20+10*x1,20+10*y1,10*(x2-x1+1),10*(y2-y1+1));
+                    console.log(20+10*x1,20+10*y1,10*(x2-x1),10*(y2-y1));
+                }
+                handle.fillStyle = "blue";
+                var maze =  [[1,1,1,10],[1,1,10,1], [1,3,10,3],[5,1,5,8],[5,8,8,8]];
+                for (i=0; i<maze.length; i++) {
+                    console.log(maze[i][0] + ", " + maze[i][1] + " to " + maze[i][2] +", " + maze[i][3]);
+                    drawMazeLine(maze[i][0], maze[i][1], maze[i][2], maze[i][3]);
+                }
+                </script>
+        </body>
+</html>
