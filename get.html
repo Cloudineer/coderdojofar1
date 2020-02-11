@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Maze Maker</title>
+    <script src="http://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>Maze Maker</h1>
+    <canvas id="maze" width="400px" height="400px" style="border: 10px solid black"></canvas>
+    <script>
+        var canvas = document.getElementById("maze");
+        var handle = canvas.getContext("2d");
+        var state = 'waiting';
+        var start_pos, end_pos;
+        function getMousePos(canvas, evt) {
+            var rect = canvas.getBoundingClientRect();
+            return {
+                x: evt.clientX - rect.left,
+                y: evt.clientY - rect.top
+            };
+        };
+        canvas.addEventListener('mousemove', function(ev) {
+            var mousePos = getMousePos(canvas, ev);
+            console.log('Mouse position: ' + mousePos.x + ',' + mousePos.y);
+        }, false);
+        canvas.addEventListener('click', function(ev) {
+            if (state == "waiting") {
+                start_pos = getMousePos(canvas, ev);
+                state = "moving";
+            } else if (state == "moving") {
+                end_pos = getMousePos(canvas, ev);
+                state = "waiting";
+                console.log("Line from "+start_pos.x+","+start_pos.y+" to "+end_pos.x+","+end_pos.y);
+            }
+        }, false);
+        function drawMazeLine(x1, y1, x2, y2) {
+            handle.fillRect(20 + 10 * x1, 20 + 10 * y1, 10 * (x2 - x1 + 1), 10 * (y2 - y1 + 1));
+            console.log(20 + 10 * x1, 20 + 10 * y1, 10 * (x2 - x1), 10 * (y2 - y1));
+        }
+        handle.fillStyle = "blue";
+        var current_maze = [];
+
+
+
+        $(function() {
+            $.get("https://two.cloudperfect.net/api/get_maze_lines_by_id.json?maze_id=1", function(maze) {
+                for (i = 0; i < maze.length; i++) {
+                    console.log(maze[i][0] + ", " + maze[i][1] + " to " + maze[i][2] + ", " + maze[i][3]);
+                    drawMazeLine(maze[i][0], maze[i][1], maze[i][2], maze[i][3]);
+                }
+            }, " json");
+
+        });
+
+    </script>
+</body>
+
+</html>
